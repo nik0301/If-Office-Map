@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DD0A080F-CD85-454F-AB80-79475F75590A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>IfOfficeMap.DataAccess</RootNamespace>
+    <AssemblyName>IfOfficeMap.DataAccess</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Database\Employee.cs" />
+    <Compile Include="Database\Utilities.cs" />
+    <Compile Include="Database\Workplace.cs" />
+    <Compile Include="DbContext.cs" />
+    <Compile Include="LyncGateway.cs" />
+    <Compile Include="Migrations\201712041448138_Init.cs" />
+    <Compile Include="Migrations\201712041448138_Init.Designer.cs">
+      <DependentUpon>201712041448138_Init.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712041500392_Init2.cs" />
+    <Compile Include="Migrations\201712041500392_Init2.Designer.cs">
+      <DependentUpon>201712041500392_Init2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712041523532_test2.cs" />
+    <Compile Include="Migrations\201712041523532_test2.Designer.cs">
+      <DependentUpon>201712041523532_test2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712041526139_missing.cs" />
+    <Compile Include="Migrations\201712041526139_missing.Designer.cs">
+      <DependentUpon>201712041526139_missing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712041531200_missing2.cs" />
+    <Compile Include="Migrations\201712041531200_missing2.Designer.cs">
+      <DependentUpon>201712041531200_missing2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712041533585_missing3.cs" />
+    <Compile Include="Migrations\201712041533585_missing3.Designer.cs">
+      <DependentUpon>201712041533585_missing3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712041535321_clear.cs" />
+    <Compile Include="Migrations\201712041535321_clear.Designer.cs">
+      <DependentUpon>201712041535321_clear.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712041656389_refactoring1.cs" />
+    <Compile Include="Migrations\201712041656389_refactoring1.Designer.cs">
+      <DependentUpon>201712041656389_refactoring1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712041708433_utilities.cs" />
+    <Compile Include="Migrations\201712041708433_utilities.Designer.cs">
+      <DependentUpon>201712041708433_utilities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712041710591_utilities2.cs" />
+    <Compile Include="Migrations\201712041710591_utilities2.Designer.cs">
+      <DependentUpon>201712041710591_utilities2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712050744386_minorRename.cs" />
+    <Compile Include="Migrations\201712050744386_minorRename.Designer.cs">
+      <DependentUpon>201712050744386_minorRename.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201712051059594_blobs.cs" />
+    <Compile Include="Migrations\201712051059594_blobs.Designer.cs">
+      <DependentUpon>201712051059594_blobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Person.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201712041448138_Init.resx">
+      <DependentUpon>201712041448138_Init.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712041500392_Init2.resx">
+      <DependentUpon>201712041500392_Init2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712041523532_test2.resx">
+      <DependentUpon>201712041523532_test2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712041526139_missing.resx">
+      <DependentUpon>201712041526139_missing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712041531200_missing2.resx">
+      <DependentUpon>201712041531200_missing2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712041533585_missing3.resx">
+      <DependentUpon>201712041533585_missing3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712041535321_clear.resx">
+      <DependentUpon>201712041535321_clear.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712041656389_refactoring1.resx">
+      <DependentUpon>201712041656389_refactoring1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712041708433_utilities.resx">
+      <DependentUpon>201712041708433_utilities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712041710591_utilities2.resx">
+      <DependentUpon>201712041710591_utilities2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712050744386_minorRename.resx">
+      <DependentUpon>201712050744386_minorRename.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712051059594_blobs.resx">
+      <DependentUpon>201712051059594_blobs.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

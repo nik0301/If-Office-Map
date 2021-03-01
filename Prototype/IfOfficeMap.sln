@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2020
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IfOfficeMap", "IfOfficeMap\IfOfficeMap.csproj", "{C67D8EE8-6A46-473E-BBC2-D4B6415E271C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IfOfficeMap.Tests", "IfOfficeMap.Tests\IfOfficeMap.Tests.csproj", "{BC3431F0-A568-4CE4-B989-DACC7009B5C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IfOfficeMap.Business", "IfOfficeMap.Business\IfOfficeMap.Business.csproj", "{E052D40C-1D79-4019-8F3E-47995884302E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IfOfficeMap.DataAccess", "IfOfficeMap.DataAccess\IfOfficeMap.DataAccess.csproj", "{DD0A080F-CD85-454F-AB80-79475F75590A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C67D8EE8-6A46-473E-BBC2-D4B6415E271C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C67D8EE8-6A46-473E-BBC2-D4B6415E271C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C67D8EE8-6A46-473E-BBC2-D4B6415E271C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C67D8EE8-6A46-473E-BBC2-D4B6415E271C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC3431F0-A568-4CE4-B989-DACC7009B5C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC3431F0-A568-4CE4-B989-DACC7009B5C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC3431F0-A568-4CE4-B989-DACC7009B5C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC3431F0-A568-4CE4-B989-DACC7009B5C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E052D40C-1D79-4019-8F3E-47995884302E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E052D40C-1D79-4019-8F3E-47995884302E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E052D40C-1D79-4019-8F3E-47995884302E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E052D40C-1D79-4019-8F3E-47995884302E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD0A080F-CD85-454F-AB80-79475F75590A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD0A080F-CD85-454F-AB80-79475F75590A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD0A080F-CD85-454F-AB80-79475F75590A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD0A080F-CD85-454F-AB80-79475F75590A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2FF7976B-2142-498E-943F-9E17DB81F3AA}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs2010at.ifint.biz/tfs/tfs2008collection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = IfOfficeMap.Business\\IfOfficeMap.Business.csproj
+		SccProjectName1 = IfOfficeMap.Business
+		SccLocalPath1 = IfOfficeMap.Business
+		SccProjectUniqueName2 = IfOfficeMap.DataAccess\\IfOfficeMap.DataAccess.csproj
+		SccProjectName2 = IfOfficeMap.DataAccess
+		SccLocalPath2 = IfOfficeMap.DataAccess
+		SccProjectUniqueName3 = IfOfficeMap.Tests\\IfOfficeMap.Tests.csproj
+		SccProjectName3 = IfOfficeMap.Tests
+		SccLocalPath3 = IfOfficeMap.Tests
+		SccProjectUniqueName4 = IfOfficeMap\\IfOfficeMap.csproj
+		SccProjectName4 = IfOfficeMap
+		SccLocalPath4 = IfOfficeMap
+	EndGlobalSection
+EndGlobal

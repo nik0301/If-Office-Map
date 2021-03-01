@@ -1,0 +1,9 @@
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data\bin\Debug\netcoreapp2.0\OfficeMap.Data.deps.json
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data\bin\Debug\netcoreapp2.0\OfficeMap.Data.dll
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data\bin\Debug\netcoreapp2.0\OfficeMap.Data.pdb
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data\obj\Debug\netcoreapp2.0\OfficeMap.Data.csprojResolveAssemblyReference.cache
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data\obj\Debug\netcoreapp2.0\OfficeMap.Data.csproj.CoreCompileInputs.cache
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data\obj\Debug\netcoreapp2.0\OfficeMap.Data.AssemblyInfoInputs.cache
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data\obj\Debug\netcoreapp2.0\OfficeMap.Data.AssemblyInfo.cs
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data\obj\Debug\netcoreapp2.0\OfficeMap.Data.dll
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data\obj\Debug\netcoreapp2.0\OfficeMap.Data.pdb

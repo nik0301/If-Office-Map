@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>If Office Map</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/Content/botox")
+</head>
+<body>
+
+@{
+    var pageName = ViewContext.RouteData.Values["controller"].ToString();
+}
+
+<div class="ecmt-page-wrapper">
+    <div class="ecmt-page">
+        <header class="ecmt-page-header ecmt-page-container" role="banner">
+            <div class="ecmt-grid-gutter-m-b">
+                <a href="~/" class="ecmt-logotype">
+                    <img src="~/Content/images/logo.png" alt="IF">
+                </a>
+            </div>
+        </header>
+        <section class="ecmt-webshop">
+            <div class="ecmt-tab-container">
+                <ul class="ecmt-tab-list js-tab-list ecmt-text-centered">
+                    <li class="ecmt-tab-item ecmt-tab-item-fat@(pageName=="Map"?" ecmt-tab-item-active":"")"><a href="~/Map">Map</a></li>
+                    <li class="ecmt-tab-item ecmt-tab-item-fat@(pageName=="Stuffdirectory"?" ecmt-tab-item-active":"")"><a href="~/Stuffdirectory">Stuff directory</a></li>
+                </ul>
+                <section>
+                    @RenderBody()
+                </section>
+            </div>
+        </section>
+    </div>
+</div>
+
+@RenderSection("Scripts", required: false)
+</body>
+</html>

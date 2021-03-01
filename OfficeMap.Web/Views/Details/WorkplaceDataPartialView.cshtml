@@ -1,0 +1,60 @@
+﻿@model OfficeMap.Business.Models.WorkplaceData
+    
+@if (Model.IsSuperUser)
+{
+    if (!Model.IsFreeWorkplace)
+    {
+        <div id="release-workplace" class="release-workplace">
+            <button class="btn btn-block bg-red" data-id="@Model.ObjectId">Atbrīvot darba vietu</button>
+        </div>
+    }
+
+    <div id="ChangeContainer">
+        <div class="change-workplace-employee">
+            <button class="btn btn-block bg-orange">Mainīt darba vietas darbinieku</button>
+        </div>
+        <div class="form-container"></div>
+    </div>
+}
+else
+{
+    if (!Model.IsEmployeesWorkplace)
+    {
+        <div class="sitting-here">
+            <button class="btn btn-block bg-orange">Labot datus, tagad sēžu šeit</button>
+        </div>
+    }
+}
+
+@if (Model.IsSuperUser && Model.WorkplaceChanges.Any())
+{
+    <div class="form-group changes-list">
+        <h5>Darba vietas maiņas pieprasījumi</h5>
+        
+        <div class="line"></div>
+        
+        <form id="ProposesAcceptForm">
+            @if (Model.WorkplaceChanges.Count == 1)
+            {
+                <input type="hidden" class="employee-list" value="@Model.WorkplaceChanges.First().Id"/>
+                <div class="form-group">
+                    @($"{Model.WorkplaceChanges.First().Employee.Name} {Model.WorkplaceChanges.First().Employee.Surname}")
+                </div>
+            }
+            else
+            {
+                <select class="form-control form-group employee-list">
+                    <option value="">-- Izvēlieties personu -- </option>
+                    @foreach (var workplaceChange in Model.WorkplaceChanges)
+                    {
+                        <option value="@workplaceChange.Id">
+                            @($"{workplaceChange.Employee.Name} {workplaceChange.Employee.Surname}")
+                        </option>
+                    }
+                </select>   
+            }
+            <div class="btn btn-block bg-green accept">Apstiprināt</div>
+            <div class="btn btn-block bg-red decline">Noraidīt</div>
+        </form>
+    </div>
+}

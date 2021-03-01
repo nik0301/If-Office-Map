@@ -1,0 +1,97 @@
+﻿<!doctype html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Office Map</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="~/lib/ModularAdmin/css/vendor.css" />
+    <link rel="stylesheet" href="~/lib/ModularAdmin/css/app-orange.css">
+    <environment include="Development">
+        <link rel="stylesheet" href="~/css/site.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+</head>
+<body>
+<div class="main-wrapper">
+    <div class="app" id="app">
+
+
+            <header class="header">
+                <div class="header-block header-block-collapse d-lg-none d-xl-none">
+                    <button class="collapse-btn" id="sidebar-collapse-btn">
+                        <em class="fa fa-bars"></em>
+                    </button>
+                </div>
+                <div class="header-block header-block-search">
+                    <form role="search">
+                        <div class="input-container">
+                            <em class="fa fa-search"></em>
+                            <input class="top-search" type="search" placeholder="Meklēt">
+                        </div>
+                    </form>
+                </div>
+                <div class="header-block header-block-nav">
+                    <ul class="nav-profile">
+                        <li class="profile">
+                            <a class="nav-link" href="#" role="button">
+                                <div class="img" style="background-image: url('@Url.Action("GetPhoto", "Home", new { id = "profile.jpg"})')"> </div>
+                                <span class="name"> @User.Identity.Name </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </header>
+
+        <aside class="sidebar">
+            <div class="sidebar-container">
+                <div class="sidebar-header">
+                    <div class="brand">
+                        <div class="logo">
+                            <span class="l l1"></span>
+                            <span class="l l2"></span>
+                            <span class="l l3"></span>
+                            <span class="l l4"></span>
+                            <span class="l l5"></span>
+                        </div> IF office MAP
+                    </div>
+                </div>
+                @RenderSection("Navigation", required: false)
+            </div>
+        </aside>
+        <div class="sidebar-overlay" id="sidebar-overlay"></div>
+        <div class="sidebar-mobile-menu-handle" id="sidebar-mobile-menu-handle"></div>
+        <div class="mobile-menu-handle"></div>
+
+            <article class="content no-bottom">
+                @RenderBody()
+            </article>
+
+            <aside class="details-sidebar">
+                <div class="details-close">&times;</div>
+                <div class="details-main"></div>
+                <div class="details-options"></div>
+            </aside>
+
+    </div>
+</div>
+
+
+<!-- Reference block for JS -->
+    <div class="ref" id="ref">
+        <div class="color-primary"></div>
+        <div class="chart">
+            <div class="color-primary"></div>
+            <div class="color-secondary"></div>
+        </div>
+    </div>
+    <script src="~/lib/ModularAdmin/vendor.js"></script>
+    <script src="~/lib/ModularAdmin/app.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

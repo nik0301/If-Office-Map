@@ -1,0 +1,41 @@
+﻿@model OfficeMap.Business.Models.WorkplaceEmployeeSetData
+
+@if (Model.Employees.Any())
+{
+    <div class="form-group changes-list">
+        <h5>Darba vietā esošā darbinieka uzstādīšana</h5>
+        
+        <div class="line"></div>
+        
+        <div id="ChangeEmployeeForm">
+            @if (Model.Employees.Count == 1)
+            {
+                <input type="hidden" class="employee-list" value="@Model.Employees.First().Id"/>
+                <div class="form-group">
+                    @($"{Model.Employees.First().Name} {Model.Employees.First().Surname}")
+                </div>
+            }
+            else
+            {
+                <select class="form-control form-group employee-list">
+                    <option value="">-- Izvēlieties personu -- </option>
+                    @foreach (var employee in Model.Employees)
+                    {
+                        <option value="@employee.Id">
+                            @($"{employee.Name} {employee.Surname}")
+                        </option>
+                    }
+                </select>
+            }
+
+            <div class="btn btn-block bg-green save">Saglabāt</div>
+            <div class="btn btn-block bg-orange cancel">Atcelt</div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="form-group text-center">
+        <h6>Nav citu darbinieku ko uzstādīt!</h6>
+    </div>
+}

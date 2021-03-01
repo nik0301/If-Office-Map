@@ -1,0 +1,88 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeMap.Data", "OfficeMap.Data\OfficeMap.Data.csproj", "{87FED76B-154C-44EF-8CD0-16D91D8D6094}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeMap.Data.Tests", "OfficeMap.Data.Tests\OfficeMap.Data.Tests.csproj", "{9D6A4F46-A331-4E24-9FA6-357DFDE2948A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeMap.Business", "OfficeMap.Business\OfficeMap.Business.csproj", "{4FB26DF0-A05A-4767-A397-290CF056B593}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeMap.Business.Tests", "OfficeMap.Business.Tests\OfficeMap.Business.Tests.csproj", "{E750EE92-7055-461E-8954-AC6B278FC8F9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeMap.Web", "OfficeMap.Web\OfficeMap.Web.csproj", "{0F71C69E-0171-4CA6-A3B7-0ACE7EB2B6B5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeMap.Web.Tests", "OfficeMap.Web.Tests\OfficeMap.Web.Tests.csproj", "{8B46B30F-9130-451C-AA1A-68E13F226FF4}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OfficeMap.Lync", "OfficeMap.Lync\OfficeMap.Lync.csproj", "{EEBA77C1-DB85-459B-8685-890B923E054A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87FED76B-154C-44EF-8CD0-16D91D8D6094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87FED76B-154C-44EF-8CD0-16D91D8D6094}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87FED76B-154C-44EF-8CD0-16D91D8D6094}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87FED76B-154C-44EF-8CD0-16D91D8D6094}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D6A4F46-A331-4E24-9FA6-357DFDE2948A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D6A4F46-A331-4E24-9FA6-357DFDE2948A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D6A4F46-A331-4E24-9FA6-357DFDE2948A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D6A4F46-A331-4E24-9FA6-357DFDE2948A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FB26DF0-A05A-4767-A397-290CF056B593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FB26DF0-A05A-4767-A397-290CF056B593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FB26DF0-A05A-4767-A397-290CF056B593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FB26DF0-A05A-4767-A397-290CF056B593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E750EE92-7055-461E-8954-AC6B278FC8F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E750EE92-7055-461E-8954-AC6B278FC8F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E750EE92-7055-461E-8954-AC6B278FC8F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E750EE92-7055-461E-8954-AC6B278FC8F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F71C69E-0171-4CA6-A3B7-0ACE7EB2B6B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F71C69E-0171-4CA6-A3B7-0ACE7EB2B6B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F71C69E-0171-4CA6-A3B7-0ACE7EB2B6B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F71C69E-0171-4CA6-A3B7-0ACE7EB2B6B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B46B30F-9130-451C-AA1A-68E13F226FF4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B46B30F-9130-451C-AA1A-68E13F226FF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B46B30F-9130-451C-AA1A-68E13F226FF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B46B30F-9130-451C-AA1A-68E13F226FF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEBA77C1-DB85-459B-8685-890B923E054A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEBA77C1-DB85-459B-8685-890B923E054A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEBA77C1-DB85-459B-8685-890B923E054A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEBA77C1-DB85-459B-8685-890B923E054A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E1619269-0EA8-47DE-BD8F-3643296AD301}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 8
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://tfs2010at.ifint.biz/tfs/tfs2008collection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = OfficeMap.Business.Tests\\OfficeMap.Business.Tests.csproj
+		SccProjectName1 = OfficeMap.Business.Tests
+		SccLocalPath1 = OfficeMap.Business.Tests
+		SccProjectUniqueName2 = OfficeMap.Business\\OfficeMap.Business.csproj
+		SccProjectName2 = OfficeMap.Business
+		SccLocalPath2 = OfficeMap.Business
+		SccProjectUniqueName3 = OfficeMap.Data.Tests\\OfficeMap.Data.Tests.csproj
+		SccProjectName3 = OfficeMap.Data.Tests
+		SccLocalPath3 = OfficeMap.Data.Tests
+		SccProjectUniqueName4 = OfficeMap.Data\\OfficeMap.Data.csproj
+		SccProjectName4 = OfficeMap.Data
+		SccLocalPath4 = OfficeMap.Data
+		SccProjectUniqueName5 = OfficeMap.Web.Tests\\OfficeMap.Web.Tests.csproj
+		SccProjectName5 = OfficeMap.Web.Tests
+		SccLocalPath5 = OfficeMap.Web.Tests
+		SccProjectUniqueName6 = OfficeMap.Web\\OfficeMap.Web.csproj
+		SccProjectName6 = OfficeMap.Web
+		SccLocalPath6 = OfficeMap.Web
+		SccProjectUniqueName7 = OfficeMap.Lync\\OfficeMap.Lync.csproj
+		SccProjectName7 = OfficeMap.Lync
+		SccLocalPath7 = OfficeMap.Lync
+	EndGlobalSection
+EndGlobal

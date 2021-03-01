@@ -1,0 +1,93 @@
+﻿@using Microsoft.AspNetCore.Routing
+@model IEnumerable<OfficeMap.Data.Models.ObjectAttribute>
+
+@{
+    Layout = "_Layout";
+}
+
+@section Navigation
+    {
+    <nav class="menu">
+        <ul class="sidebar-menu metismenu" id="sidebar-menu">
+            <li class="active">
+                <a href="/">
+                    <em class="fa fa-home"></em> Sākums
+                </a>
+            </li>
+        </ul>
+    </nav>
+}
+
+<div class="list">
+    @if (Model.Any())
+    {
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Attribute.Name)</th>
+                    <th>@Html.DisplayNameFor(model => model.Value)</th>
+                    <th>Opcijas</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr data-id="@item.Id">
+                        <td class="attr-name">
+                            @Html.DisplayFor(modelItem => item.Attribute.Name)
+                        </td>
+                        <td class="attr-value" data-id="@Html.DisplayFor(modelItem => item.Value)">
+                            @Html.DisplayFor(modelItem => item.Value)
+                        </td>
+                        <td>
+                            <div class="input-group">
+                                <button class="btn bg-green edit">Labot</button>
+                                <button class="btn bg-red delete">Dzēst</button>
+                                <button class="btn bg-green update" style="display: none">Saglabāt</button>
+                                <button class="btn bg-orange cancel" style="display: none">Atcelt</button>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+</div>
+
+<button class="btn bg-green add" data-id="@Context.GetRouteData().Values["id"]">Pievienot jaunu objekta atribūtu</button>
+
+<!-- Modal -->
+<div id="DeleteModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn bg-red delete">Dzēst</button>
+                <button type="button" class="btn bg-orange" data-dismiss="modal">Atcelt</button>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<div id="CreateForm" class="row">
+    <div class="col-md-4"></div>
+</div>
+
+@section Scripts
+{
+    @{ await Html.RenderPartialAsync("_ValidationScriptsPartial"); }
+    <script src="~/js/common.js" asp-append-version="true"></script>
+    <script src="~/js/attributes/object-attribute.js" asp-append-version="true"></script>
+    <script src="~/js/attributes/add-object-attribute.js" asp-append-version="true"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script type="text/javascript">
+        $('.header-block-search').hide();
+        objectAttributeData();
+        objectAttributeAddData("@Html.DisplayNameFor(model => model.Attribute.Name)", "@Html.DisplayNameFor(model => model.Value)", "@Context.GetRouteData().Values["id"]");
+    </script>
+}

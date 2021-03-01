@@ -1,0 +1,64 @@
+﻿@model IEnumerable<OfficeMap.Data.Models.Employee>
+
+@{
+    Layout = "_Layout";
+}
+
+@section Navigation
+    {
+    <nav class="menu">
+        <ul class="sidebar-menu metismenu" id="sidebar-menu">
+            <li class="active">
+                <a href="/">
+                    <em class="fa fa-home"></em> Sākums
+                </a>
+            </li>
+        </ul>
+    </nav>
+}
+<h2>Superusers</h2>
+
+<p>
+    <a asp-action="">Users</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Surname)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsSuperUser)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            if (item.IsSuperUser)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Surname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IsSuperUser)
+                    </td>
+                    @*<td>
+                            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                        </td>*@
+                </tr>
+            }
+        }
+    </tbody>
+</table>

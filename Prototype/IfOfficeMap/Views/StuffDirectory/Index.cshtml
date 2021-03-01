@@ -1,0 +1,65 @@
+﻿@model IEnumerable<IfOfficeMap.DataAccess.Person>
+
+@{
+    var statusColor = "";
+}
+
+<style>
+    #staff td {
+        padding: 5px;
+    }
+</style>
+<div class="row">
+    <div class="container-fluid">
+        <div class="col-xs-12">
+            <table id="staff" class="table">
+                @foreach (var person in Model)
+                {
+                    switch (person.Available)
+                    {
+                        case "Free":
+                            statusColor = "success";
+                            break;
+                        case "Away":
+                            statusColor = "warning";
+                            break;
+                        case "Offline":
+                            statusColor = "active";
+                            break;
+                        case "Busy":
+                            statusColor = "danger";
+                            break;
+                        default:
+                            statusColor = "";
+                            break;
+                    }
+
+                    <tr class="@statusColor">
+                        <td>
+                            @if (person.Photo != null)
+                        {
+                                <img class="preview" src="@person.PhotoData"/>
+                            }
+                            else
+                            {
+                                <p>NO IMAGE</p>
+                            }
+                        </td>
+                        <td>
+                            <p>@person.FirstName</p></td>
+                        <td>
+                            <p>@person.LastName</p></td>
+                        <td>
+                            <p>@person.Title</p></td>
+                        <td>
+                            <p>@person.Department</p></td>
+                        <td>
+                            <p>@person.Available</p></td>
+                    </tr>
+                }
+    
+            </table>
+        </div>
+    </div>
+</div>
+

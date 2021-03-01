@@ -1,0 +1,10 @@
+C:\If Baltic InHouse projects\Office map\OfficeMap.Lync\bin\Debug\netcoreapp2.0\OfficeMap.Lync.deps.json
+C:\If Baltic InHouse projects\Office map\OfficeMap.Lync\bin\Debug\netcoreapp2.0\OfficeMap.Lync.dll
+C:\If Baltic InHouse projects\Office map\OfficeMap.Lync\bin\Debug\netcoreapp2.0\OfficeMap.Lync.pdb
+C:\If Baltic InHouse projects\Office map\OfficeMap.Lync\bin\Debug\netcoreapp2.0\If.Lync.dll
+C:\If Baltic InHouse projects\Office map\OfficeMap.Lync\obj\Debug\netcoreapp2.0\OfficeMap.Lync.csproj.CoreCompileInputs.cache
+C:\If Baltic InHouse projects\Office map\OfficeMap.Lync\obj\Debug\netcoreapp2.0\OfficeMap.Lync.AssemblyInfoInputs.cache
+C:\If Baltic InHouse projects\Office map\OfficeMap.Lync\obj\Debug\netcoreapp2.0\OfficeMap.Lync.AssemblyInfo.cs
+C:\If Baltic InHouse projects\Office map\OfficeMap.Lync\obj\Debug\netcoreapp2.0\OfficeMap.Lync.dll
+C:\If Baltic InHouse projects\Office map\OfficeMap.Lync\obj\Debug\netcoreapp2.0\OfficeMap.Lync.pdb
+C:\If Baltic InHouse projects\Office map\OfficeMap.Lync\obj\Debug\netcoreapp2.0\OfficeMap.Lync.csprojResolveAssemblyReference.cache

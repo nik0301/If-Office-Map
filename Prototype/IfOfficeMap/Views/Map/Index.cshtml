@@ -1,0 +1,131 @@
+﻿<style>
+    #SearchString {
+        max-width: 100%;
+    }
+
+    .customTooltip {
+        background-color: #212121 !important;
+        opacity: 1 !important;
+    }
+</style>
+
+<div class="row">
+    <div class="container">
+        <div class="col-xs-12">
+            <h1>Search...</h1>
+
+            <form onsubmit="event.preventDefault(); search();">
+                <div class="form-group">
+                    @Html.TextBox("SearchString", null, new { @class = "form-control", placeholder = "Staff, printers, kitchen..." })
+                </div>
+            </form>
+               
+            
+        </div>
+    </div>
+</div>
+
+@Html.Partial("Map")
+
+<script>
+
+    function search(parameters) {
+        Start("1");
+    }
+
+    function Start(parameter) {
+        var url = "/Workplace";
+        if (parameter && $("#SearchString").val() !== "") {
+            url = "/Workplace/Search?SearchString=" + $("#SearchString").val();
+        } 
+        $.get(url,
+            function (data) {
+                var ServerPlots = data;
+
+                $(".mapcontainer").mapael({
+                    map: {
+                        name: "finalmap",
+                        // Enable zoom on the map
+                        zoom: {
+                            enabled: true
+                        },
+                        // Set default plots and areas style
+                        //    defaultPlot: {
+                        //        attrs: {
+                        //            fill: "#004a9b",
+                        //            opacity: 0.6
+                        //        },
+                        //        attrsHover: {
+                        //            opacity: 1
+                        //        },
+                        //        text: {
+                        //            attrs: {
+                        //                fill: "#000"
+                        //            },
+                        //            attrsHover: {
+                        //                fill: "#000"
+                        //            }
+                        //        }
+                        //    },
+                        defaultArea: {
+                            attrs: {
+                                //fill: "#008ED5",
+                                stroke: "#ced8d0"
+                            },
+                            attrsHover: {
+                                fill: "#008ED5"
+                            },
+                            text: {
+                                attrs: {
+                                    fill: "#000"
+                                },
+                                attrsHover: {
+                                    fill: "#fff"
+                                }
+                            }
+                        }
+                    },
+                    // Customize some areas of the map
+                    areas: {
+                        "department-56": {
+                            text: { content: "Kitchen", attrs: { "font-size": 10 } },
+                            tooltip: {
+                                content: "Microwave, Refridgerator, Magazines, Coffee Maker"
+                            },
+                            href: "http://fr.wikipedia.org/wiki/Morbihan"
+                        },
+                        "department-21": {
+                            text: { content: "Kitchen 2", attrs: { "font-size": 10 } },
+                            attrs: {
+                                fill: "#00BBFF"
+                            },
+                            attrsHover: {
+                                fill: "#00BBFF"
+                            },
+                            href: "http://fr.wikipedia.org/wiki/C%C3%B4te-d%27Or",
+                            target: "_blank"
+                        },
+                        "department-29": {
+                            attrs: {
+                                fill: "#00BBFF"
+                            },
+                            attrsHover: {
+                                fill: "#00BBFF"
+                            },
+                            href: "http://fr.wikipedia.org/wiki/C%C3%B4te-d%27Or",
+                            target: "_blank"
+                        }
+                    },
+
+                    // Add some plots on the map
+                    plots: ServerPlots
+                });
+            });
+    }
+    $(function () {
+
+        Start();
+
+    });
+
+</script>

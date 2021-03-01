@@ -1,0 +1,87 @@
+﻿@model OfficeMap.Business.Models.ObjectDetails
+
+<div class="details-content">
+    @if (Model.EmployeeDetails == null
+        && Model.Attributes.Count == 0)
+    {
+        <div class="form-group text-center">
+            Nav informācijas!
+        </div>
+    }
+    else
+    {
+        if (Model.EmployeeDetails != null)
+        {
+            <div class="form-group details-employee" data-id="@Model.EmployeeDetails.UserIdentity.Value">
+                <div class="label-status"></div>
+                <div class="circle-avatar border-default" style="background-image: url(@($"/Home/GetPhoto/{Model.EmployeeDetails.Id.Value}.jpg")"></div>
+                <div class="form-group text-center">
+                    <div class="text-uppercase">
+                        <h5>@Model.EmployeeDetails.Name.Value @Model.EmployeeDetails.Surname.Value</h5>
+                    </div>
+                </div>
+                <div class="form-group text-center">
+                    <div>@Model.EmployeeDetails.Unit.Value</div>
+                    <div>@Model.EmployeeDetails.JobTitle.Value</div>
+                </div>
+                <div class="form-group">
+                    <div>
+                        <em class="fa fa-laptop"></em>&nbsp;
+                        <a class="employee-email" href="mailto:Model.EmployeeDetails.Email.Value" data-id="@Model.EmployeeDetails.Email.Value">
+                            @Model.EmployeeDetails.Email.Value
+                        </a>
+                    </div>
+                    <div>
+                        <em class="fa fa-phone"></em>&nbsp;
+                        <a href="tel:@Model.EmployeeDetails.Phone.Value">@Model.EmployeeDetails.Phone.Value</a>
+                    </div>
+                </div>
+            </div>
+        }
+
+        if (Model.Attributes.Count != 0)
+        {
+            if (Model.EmployeeDetails != null)
+            {
+                <div class="line"></div>
+            }
+
+            <div class="form-group details-attributes">
+                @if (Model.Type.Id == "meeting")
+                {
+                    <div class="text-center">
+                        <h5>@Model.Type.Name</h5>
+                    </div>
+                }
+
+                @if (Model.Attributes.Exists(a => a.Name == "Nosaukums"))
+                {
+                    <div class="text-center">
+                        <h5>@Model.Attributes.Find(a => a.Name == "Nosaukums").Value</h5>
+                    </div>
+                }
+
+                @foreach (var attribute in Model.Attributes)
+                {
+                    if (attribute.Value.Trim().Length == 0)
+                    {
+                        <div>@attribute.Name</div>
+                    }
+                    else
+                    {
+                        <div>@($"{attribute.Name}: {attribute.Value}")</div>
+                    }
+                }
+            </div>
+        }
+    }
+</div>
+
+<div class="details-buttons">
+    @if (Model.IsSuperUser)
+    {
+        <div id="btn-attributes-edit" class="btn-details">
+            <a href="/ObjectAttribute/Index/@Model.ObjectId" class="btn btn-block bg-green">Labot attribūtus</a>
+        </div>
+    }
+</div>

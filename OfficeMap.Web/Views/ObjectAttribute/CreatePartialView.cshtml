@@ -1,0 +1,50 @@
+﻿@model OfficeMap.Web.Controllers.NewObjectAttributeCreate
+
+@{
+    var display = Model.Attributes.Any();
+    var cssDisplay = display ? "none" : "block";
+}
+
+<h5>Jauns objekta atribūts</h5>
+
+<form asp-action="Post" asp-controller="ObjectAttributesApi">
+    @Html.AntiForgeryToken()
+
+    <input type="hidden" asp-for="ObjectId" />
+
+    @if (display)
+    {
+        <div class="form-group">
+            <select asp-for="AttributeId" asp-items="Model.Attributes" class="form-control">
+                <option value="">-- Izvēlieties atribūtu-- </option>
+                <option value="other">Cits</option>
+            </select>
+            <span asp-validation-for="AttributeId" class="text-danger"></span>
+        </div>
+    }
+
+    <div class="new-attribute" style="display: @cssDisplay">
+        <div class="form-group">
+            <input id="NewAttributeId" name="NewAttributeId" class="form-control" placeholder="Jaunā attribūta identifikatrs" />
+            <div><span class="text-muted small">Maksimums 10 rakstzīmes</span></div>
+            <span class="text-danger field-validation-valid" data-valmsg-for="NewAttributeId" data-valmsg-replace="true"></span>
+        </div>
+        <div class="form-group">
+            <input id="NewAttributeName" name="NewAttributeName" class="form-control" placeholder="Jaunā attribūta nosaukums" />
+            <div><span class="text-muted small">Maksimums 50 rakstzīmes</span></div>
+            <span class="text-danger field-validation-valid" data-valmsg-for="NewAttributeName" data-valmsg-replace="true"></span>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <input asp-for="Value" class="form-control" placeholder="Vērtība" />
+        <span asp-validation-for="Value" class="text-danger"></span>
+        <div>
+            <span class="text-muted small">Maksimums 50 rakstzīmes</span>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Pievienot" class="btn bg-green" />
+        <div class="btn bg-orange cancel">Atcelt</div>
+    </div>
+</form>

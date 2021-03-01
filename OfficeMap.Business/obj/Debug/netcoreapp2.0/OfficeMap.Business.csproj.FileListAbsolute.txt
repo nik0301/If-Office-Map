@@ -1,0 +1,16 @@
+C:\If Baltic InHouse projects\Office map\OfficeMap.Business\bin\Debug\netcoreapp2.0\OfficeMap.Business.deps.json
+C:\If Baltic InHouse projects\Office map\OfficeMap.Business\bin\Debug\netcoreapp2.0\OfficeMap.Business.dll
+C:\If Baltic InHouse projects\Office map\OfficeMap.Business\bin\Debug\netcoreapp2.0\OfficeMap.Business.pdb
+C:\If Baltic InHouse projects\Office map\OfficeMap.Business\bin\Debug\netcoreapp2.0\If.Lync.dll
+C:\If Baltic InHouse projects\Office map\OfficeMap.Business\bin\Debug\netcoreapp2.0\Microsoft.IdentityModel.Protocols.dll
+C:\If Baltic InHouse projects\Office map\OfficeMap.Business\bin\Debug\netcoreapp2.0\OfficeMap.Data.dll
+C:\If Baltic InHouse projects\Office map\OfficeMap.Business\bin\Debug\netcoreapp2.0\OfficeMap.Lync.dll
+C:\If Baltic InHouse projects\Office map\OfficeMap.Business\bin\Debug\netcoreapp2.0\OfficeMap.Data.pdb
+C:\If Baltic InHouse projects\Office map\OfficeMap.Business\bin\Debug\netcoreapp2.0\OfficeMap.Lync.pdb
+C:\If Baltic InHouse projects\Office map\OfficeMap.Business\bin\Debug\netcoreapp2.0\Microsoft.IdentityModel.Protocols.xml
+C:\If Baltic InHouse projects\Office map\OfficeMap.Business\obj\Debug\netcoreapp2.0\OfficeMap.Business.csprojResolveAssemblyReference.cache
+C:\If Baltic InHouse projects\Office map\OfficeMap.Business\obj\Debug\netcoreapp2.0\OfficeMap.Business.csproj.CoreCompileInputs.cache
+C:\If Baltic InHouse projects\Office map\OfficeMap.Business\obj\Debug\netcoreapp2.0\OfficeMap.Business.AssemblyInfoInputs.cache
+C:\If Baltic InHouse projects\Office map\OfficeMap.Business\obj\Debug\netcoreapp2.0\OfficeMap.Business.AssemblyInfo.cs
+C:\If Baltic InHouse projects\Office map\OfficeMap.Business\obj\Debug\netcoreapp2.0\OfficeMap.Business.dll
+C:\If Baltic InHouse projects\Office map\OfficeMap.Business\obj\Debug\netcoreapp2.0\OfficeMap.Business.pdb

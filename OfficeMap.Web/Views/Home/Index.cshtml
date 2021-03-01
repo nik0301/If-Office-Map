@@ -1,0 +1,138 @@
+﻿@model OfficeMap.Business.Models.FloorData
+
+@section Navigation
+    {
+    <nav class="menu">
+        <ul class="sidebar-menu metismenu" id="sidebar-menu">
+            <li class="active">
+                <a href="/">
+                    <em class="fa fa-home"></em> Sākums
+                </a>
+            </li>
+
+            <li>
+                <a href="">
+                    <em class="fa fa-dashboard"></em> Stāvs:
+                    <span class="label label-screenful">@Model.SelectedFloor?.Seq</span>
+                    <em class="fa arrow"></em>
+                </a>
+                <ul class="sidebar-nav">
+                    @foreach (var item in Model.Floors.OrderBy(m => m.Seq))
+                    {
+                        <li>
+                            <a href="@Url.Action("Index", null, new { floorId = item.Id })">
+                                @if (item.Id == Model.SelectedFloor.Id)
+                                {
+                                    <em class="fa fa-check"></em>
+                                }
+                                @Html.DisplayFor(modelItem => item.Title)
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </li>
+
+            <li id="object-type-dropdown">
+                <a href="">
+                    <em class="fa fa-th-large"></em> Objekta tips:
+                    @foreach (var type in Model.ObjectTypes)
+                    {
+                        <span data-id="@type.Id" class="label label-screenful" hidden>@type.Name</span>
+                    }
+                    <em class="fa arrow"></em>
+                </a>
+                <ul class="sidebar-nav">
+                    @foreach (var type in Model.ObjectTypes)
+                    {
+                        <li>
+                            <a href="#" class="type-link" data-id="@type.Id">
+                                <em class="fa fa-check" hidden></em>
+                                <label>@type.Name</label>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </li>
+
+            <li id="unit-dropdown">
+                <a href="">
+                    <em class="fa fa-th-large"></em> Nodaļa:
+                    @foreach (var unit in Model.Units)
+                    {
+                        <span data-id="@unit.Id" class="label label-screenful" hidden>@unit.Name</span>
+                    }
+                    <em class="fa arrow"></em>
+                </a>
+                <ul class="sidebar-nav">
+                    @foreach (var unit in Model.Units)
+                    {
+                        <li>
+                            <a href="#" class="unit-link" data-id="@unit.Id">
+                                <em class="fa fa-check" hidden></em>
+                                <label>@unit.Name</label>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </li>
+
+            <li>
+                <a href="" id="free-workplaces">
+                    <em class="fa fa-briefcase"></em> Brīvās darba vietas
+                </a>
+            </li>
+            
+            <li>
+                <a href="Superuser/" id="superusers">
+                    <em class="fa fa-briefcase"></em> Superusers
+                </a>
+            </li>
+            
+
+        </ul>
+    </nav>
+}
+
+<div class="row">
+    <div class="col">
+        <div class="mapcontainer">
+            <div class="map">
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts
+    {
+    <script src="~/lib/Mapael/raphael.min.js" charset="utf-8"></script>
+    <script src="~/lib/Mapael/jquery.mousewheel.min.js" charset="utf-8"></script>
+    <script src="~/lib/Mapael/jquery.mapael.min.js" charset="utf-8"></script>
+
+    <environment include="Development">
+        <script src="~/js/common.js" asp-append-version="true"></script>
+        <script src="~/js/url.params.js" asp-append-version="true"></script>
+        <script src="~/js/map.js" asp-append-version="true"></script>
+        <script src="~/js/menu.js" asp-append-version="true"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/details-sidebar.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+        <script src="~/js/details-sidebar.js" asp-append-version="true"></script>
+    </environment>
+    <script type="text/javascript">
+        siteData();        
+
+        const urlObj = URLParams(window.location.href);
+        const search = urlObj.values("search").join("");
+        const types = urlObj.values("type").join(",");
+        const filters = urlObj.values("filters").join(",");
+        const units = urlObj.values("unit").join(",");
+
+        const mapObj = mapData(@Model.SelectedFloor?.Id, search, types, filters, units, @Model.SelectedFloor.Height, @Model.SelectedFloor.Width);
+
+        const menuObj = menuData(urlObj, mapObj, search, types, filters, units);
+
+        var detailsObj = detailsSidebarData();
+    </script>
+}

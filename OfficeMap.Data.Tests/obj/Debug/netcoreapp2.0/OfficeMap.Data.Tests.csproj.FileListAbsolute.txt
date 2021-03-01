@@ -1,0 +1,16 @@
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data.Tests\bin\Debug\netcoreapp2.0\xunit.runner.visualstudio.dotnetcore.testadapter.dll
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data.Tests\bin\Debug\netcoreapp2.0\xunit.runner.reporters.netcoreapp10.dll
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data.Tests\bin\Debug\netcoreapp2.0\xunit.runner.utility.netcoreapp10.dll
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data.Tests\bin\Debug\netcoreapp2.0\OfficeMap.Data.Tests.deps.json
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data.Tests\bin\Debug\netcoreapp2.0\OfficeMap.Data.Tests.runtimeconfig.json
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data.Tests\bin\Debug\netcoreapp2.0\OfficeMap.Data.Tests.runtimeconfig.dev.json
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data.Tests\bin\Debug\netcoreapp2.0\OfficeMap.Data.Tests.dll
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data.Tests\bin\Debug\netcoreapp2.0\OfficeMap.Data.Tests.pdb
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data.Tests\bin\Debug\netcoreapp2.0\OfficeMap.Data.dll
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data.Tests\bin\Debug\netcoreapp2.0\OfficeMap.Data.pdb
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data.Tests\obj\Debug\netcoreapp2.0\OfficeMap.Data.Tests.csprojResolveAssemblyReference.cache
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data.Tests\obj\Debug\netcoreapp2.0\OfficeMap.Data.Tests.csproj.CoreCompileInputs.cache
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data.Tests\obj\Debug\netcoreapp2.0\OfficeMap.Data.Tests.AssemblyInfoInputs.cache
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data.Tests\obj\Debug\netcoreapp2.0\OfficeMap.Data.Tests.AssemblyInfo.cs
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data.Tests\obj\Debug\netcoreapp2.0\OfficeMap.Data.Tests.dll
+C:\If Baltic InHouse projects\Office map\OfficeMap.Data.Tests\obj\Debug\netcoreapp2.0\OfficeMap.Data.Tests.pdb
